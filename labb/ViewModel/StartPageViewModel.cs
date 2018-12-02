@@ -24,7 +24,19 @@ namespace labb.ViewModel
             TextLabel = "Skriv någe";
             originator.SetState(TextLabel);
             caretaker.Do(originator);
-            ButtonCommand = new Command<string>(execute: Button, canExecute: obj => { return true; });
+            ButtonCommand = new Command<string>(
+            execute: Button, 
+            canExecute: obj =>
+            {
+                if (!TextLabel.Contains(obj))
+                {
+                    return true;
+                } else
+                {
+                    return false;
+                }
+
+            });
             UndoCommand = new Command<string>(execute: Undo, canExecute: obj => { return true; });
             RedoCommand = new Command<string>(execute: Redo, canExecute: obj => { return true; });
         }

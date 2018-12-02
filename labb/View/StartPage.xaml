@@ -8,10 +8,10 @@
     <ContentPage.Content>
         <StackLayout>
         <Label Margin="20,60,20,0" Text="{Binding TextLabel}" HorizontalOptions="Center"/>
-        <Button Margin="60,20,60,0" Text="Hej" Command="{Binding ButtonCommand}" CommandParameter="hej"/>
-        <Button Margin="60,10,60,0" Text="På" Command="{Binding ButtonCommand}" CommandParameter="på"/>
-        <Button Margin="60,10,60,0" Text="Dig" Command="{Binding ButtonCommand}" CommandParameter="dig"/>
-        <Button Margin="60,10,60,0" Text="Va" Command="{Binding ButtonCommand}" CommandParameter="va"/>
+        <Button Margin="60,20,60,0" Text="hej" Command="{Binding ButtonCommand}" CommandParameter="hej"/>
+        <Button Margin="60,10,60,0" Text="halløj" Command="{Binding ButtonCommand}" CommandParameter="halløj"/>
+        <Button Margin="60,10,60,0" Text="och" Command="{Binding ButtonCommand}" CommandParameter="och"/>
+        <Button Margin="60,10,60,0" Text="hejdå" Command="{Binding ButtonCommand}" CommandParameter="hejdå"/>
         
         <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
             <Button Margin="20,10,20,0" HorizontalOptions="FillAndExpand" Text="UNDO" Command="{Binding UndoCommand}"/>
