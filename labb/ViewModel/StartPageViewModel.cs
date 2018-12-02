@@ -59,7 +59,7 @@ namespace labb.ViewModel
         private void Undo(string obj)
         {
             caretaker.Undo();
-            caretaker.RestoreState(originator);
+            caretaker.ResetState(originator);
             TextLabel = originator.State;
             RefreshCanExcecute();
         }
@@ -67,7 +67,7 @@ namespace labb.ViewModel
         private void Redo(string obj)
         {
             caretaker.Redo();
-            caretaker.RestoreState(originator);
+            caretaker.ResetState(originator);
             TextLabel = originator.State;
             RefreshCanExcecute();
         }

@@ -14,10 +14,12 @@ namespace labb.Model
             RedoMementoStack.Clear();
         }
 
-        public void RestoreState(Originator originator)
+        public void ResetState(Originator originator)
         {
             if (UndoMementoStack.Count != 0)
+            {
                 originator.SetMemento(UndoMementoStack.Peek());
+            }
         }
 
         public void Undo()
