@@ -8,18 +8,18 @@ namespace labb.Model
         private Stack<Memento> UndoMementoStack = new Stack<Memento>();
         private Stack<Memento> RedoMementoStack = new Stack<Memento>();
 
-        public void Do(Originator originator)
-        {
-            UndoMementoStack.Push(originator.CreateMemento());
-            RedoMementoStack.Clear();
-        }
-
         public void ResetState(Originator originator)
         {
             if (UndoMementoStack.Count != 0)
             {
                 originator.SetMemento(UndoMementoStack.Peek());
             }
+        }
+
+        public void Do(Originator originator)
+        {
+            UndoMementoStack.Push(originator.CreateMemento());
+            RedoMementoStack.Clear();
         }
 
         public void Undo()
