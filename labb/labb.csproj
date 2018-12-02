@@ -24,8 +24,6 @@
     <Compile Remove="View\Page.xaml.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="MainPage.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
+    <EmbeddedResource Remove="MainPage.xaml" />
   </ItemGroup>
 </Project>

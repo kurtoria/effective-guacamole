@@ -41,6 +41,17 @@ namespace labb.Model
 
         }
 
+        //For later purpose
+        //public int CheckEmptyUndoStack()
+        //{
+        //    return UndoMementoStack.Count;
+        //}
+
+        //public int CheckEmptyRedoStack()
+        //{
+        //    return RedoMementoStack.Count;
+        //}
+
 
 
     }
