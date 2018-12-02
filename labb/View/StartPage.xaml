@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="labb.View.StartPage"
+             xmlns:local="clr-namespace:labb.ViewModel;Assembly=labb"
+             BackgroundColor="Gray"
+             BindingContext="{local:StartPageViewModel}">
+    <ContentPage.Content>
+        <StackLayout>
+        <Label Margin="20,60,20,0" Text="{Binding TextLabel}" HorizontalOptions="Center"/>
+        <Button Margin="60,20,60,0" Text="Hej" Command="{Binding ButtonCommand}" CommandParameter="hej"/>
+        <Button Margin="60,10,60,0" Text="På" Command="{Binding ButtonCommand}" CommandParameter="på"/>
+        <Button Margin="60,10,60,0" Text="Dig" Command="{Binding ButtonCommand}" CommandParameter="dig"/>
+        <Button Margin="60,10,60,0" Text="Va" Command="{Binding ButtonCommand}" CommandParameter="va"/>
+        
+        <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+            <Button Margin="20,10,20,0" HorizontalOptions="FillAndExpand" Text="UNDO" Command="{Binding UndoCommand}"/>
+            <Button Margin="20,10,20,0" HorizontalOptions="FillAndExpand" Text="REDO" Command="{Binding RedoCommand}"/>
+        </StackLayout>
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,4 +1,5 @@
 ﻿using System;
+using labb.View;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +12,8 @@ namespace labb
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            //MainPage = new MainPage();
+            MainPage = new StartPage();
         }
 
         protected override void OnStart()
